@@ -1,0 +1,49 @@
+loadrt time
+loadrt not
+
+addf time.0 servo-thread
+addf not.0 servo-thread
+
+loadrt and2 count=2
+loadrt or2 count=5
+loadrt xor2 count=1
+loadrt siggen num_chan=1
+addf and2.0 servo-thread 			#signalleuchte.hal - Zeile 17
+addf and2.1 servo-thread
+addf or2.0 servo-thread 			#signalleuchte.hal - Zeile 4
+addf or2.1 servo-thread 			#handrad.hal - Zeile 58
+addf or2.2 servo-thread 			#handrad.hal - Zeile 63
+addf or2.3 servo-thread 			#handrad.hal - Zeile 128
+addf or2.4 servo-thread 			#handrad.hal - Zeile 137
+addf xor2.0 servo-thread 			#signalleuchte.hal - Zeile 16
+
+addf siggen.0.update servo-thread 	# Blinken Signalleuchte
+setp siggen.0.frequency 2  			# Blinkgeschwindikeit in Hz Programmpause - signalleuchte.hal - Zeile 18
+
+#net prog-running not.0.in <= halui.program.is-idle
+#net prog-paused halui.program.is-paused => time.0.pause
+net cycle-timer time.0.start <= not.0.out
+net cycle-seconds qtpyvcp.timerseconds.in <= time.0.seconds
+net cycle-minutes qtpyvcp.timerminutes.in <= time.0.minutes
+net cycle-hours qtpyvcp.timerhours.in <= time.0.hours
+# *** Time items required for Probe Basic to run ***
+
+
+# *** Probe graphic simulation trigger push probe tip ***
+#net probe-in  =>  qtpyvcp.probe-in.out
+net probe-in  <=  qtpyvcp.probe-led.on
+
+#  ---manual tool change signals---
+net tool-change-request     =>  qtpyvcp_manualtoolchange.change
+net tool-change-confirmed   <=  qtpyvcp_manualtoolchange.changed
+net tool-number             =>  qtpyvcp_manualtoolchange.number
+
+# *** Set line below for actual spindle readout from your hal file ***
+#net spindle-rpm-filtered scale_to_rpm.out  =>  qtpyvcp.spindle-encoder-rpm.in
+
+#source xhc_whb04b_6.hal
+source komponenten/handrad.hal
+source komponenten/ethercat_omron.hal
+source komponenten/signalleuchte.hal
+source komponenten/taster_schalter.hal
+#source sbdminimill.hal

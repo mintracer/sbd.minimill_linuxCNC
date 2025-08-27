@@ -1,0 +1,20 @@
+######################## SIGNALLEUCHTE #######################################
+
+#Blaue Leuchte
+net pdnt.mist.is-on => or2.0.in0
+net pdnt.flood.is-on => or2.0.in1
+net blue-on <= or2.0.out => lcec.0.EL2024_1.dout-0
+
+#Weisse Leuchte
+net machine.is-on => lcec.0.EL2024_1.dout-1
+
+#Rote Leuchte
+net red-on <= halui.estop.is-activated => lcec.0.EL2024_1.dout-2
+
+
+#Gruene Leuchte
+net pdnt.program-is-running => xor2.0.in0
+net pdnt.program.is-paused => and2.0.in0
+net flash <= siggen.0.clock => and2.0.in1
+net green-flash <= and2.0.out => xor2.0.in1
+net green-on <= xor2.0.out => lcec.0.EL2024_1.dout-3

@@ -1,0 +1,34 @@
+#*******************
+#  ETHERCAT SPINDLE - Ethercat mainstuff loaded with ini in ethercat.hal
+#*******************
+
+#Load conversions for speed and controlword
+loadrt conv_float_s32 count=1
+loadrt conv_float_u32 count=1
+addf conv-float-s32.0 servo-thread
+addf conv-float-u32.0 servo-thread
+#Load mux2 for controlword
+loadrt mux2 names=mux2.spindle-enable
+addf    mux2.spindle-enable        servo-thread
+
+#mux2 section
+#Spindle OFF
+setp mux2.spindle-enable.in0 10
+#Spindle ON
+setp mux2.spindle-enable.in1 15
+
+#networking pins for start / stop
+
+net pdnt.spindle.is-on => mux2.spindle-enable.sel
+net spindel-conv conv-float-u32.0.in mux2.spindle-enable.out
+net spindle-ctrl-cmd conv-float-u32.0.out => lcec.0.3G3AX-MX2-ECT.srv-cia-controlword
+net pdnt.spindle.is-on <=  spindle.0.on  => mux2.spindle-enable.sel
+
+#networking pins for speed
+
+net spindlespeed spindle.0.speed-out conv-float-s32.0.in  
+net speed_out conv-float-s32.0.out lcec.0.3G3AX-MX2-ECT.srv-target-vl
+ 
+# ---Setup spindle at speed signals---
+
+#sets spindle-at-speed true

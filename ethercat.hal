@@ -1,0 +1,12 @@
+# ---------------------------------
+# EtherCAT and IO HAL for LinuxCNC 2.9.4
+# Angepasst auf aktuelle Slaves
+# ---------------------------------
+
+# Load EtherCAT configuration (User-space only!)
+loadusr -W lcec_conf ethercat-conf.xml
+loadrt lcec
+addf    lcec.read-all            servo-thread
+#addf    motion-command-handler  servo-thread
+#addf    motion-controller       servo-thread
+addf    lcec.write-all            servo-thread

@@ -1,0 +1,34 @@
+T11  P11  D+0.100000 ; - Gravurspitze
+T41  P41  D+2.350000 ; Gewindefräser - M3 - 05 - 3
+T42  P42  D+3.150000 ; Gewindefräser - M4 - 07 - 3
+T43  P43  D+4.800000 ; Gewindefräser - M6 - 10 - 3
+T44  P44  D+6.500000 ; Gewindefräser - M8 - 125 - 1
+T51  P51  D+6.000000 Z+22.131443 ; Dreanique - 51 - (6mm 90° Fasenfräser)
+T52  P52  D+8.000000 ; Dreanique - 52 - (8mm 90° Fasenfräser)
+T53  P53  D+2.100000 ; ESATEC Radiusfräser 6mm - R2
+T63  P63  D+6.000000 ; Dreanique - Kugelkopf - R2.5 D6 L50 2Z
+T64  P64  D+6.000000 Z+27.526452 ; Kugelkopf - R3 D6 L50 2Z
+T65  P65  D+8.000000 ; Kugelkopf - R4 D6 L60 2Z
+T71  P71  D+0.500000 ; SpeTool - konisch - 025 - 15 - 3175 - 512
+T72  P72  D+1.000000 ; SpeTool - konisch - 050 - 15 - 3175 - 416
+T73  P73  D+1.500000 ; SpeTool - konisch - 075 - 15 - 3175 - 32
+T74  P74  D+2.000000 ; SpeTool - konisch - 100 - 15 - 3175 - 224
+T81  P81  D+1.000000 Z+33.094779 ; Dreanique - DSP-1F-D1.0-L04
+T82  P82  D+1.500000 ; Dreanique - DSP-1F-D1.5-L05
+T83  P83  D+2.000000 ; Dreanique - DSP-1F-D2.0-L06
+T84  P84  D+2.000000 ; Dreanique - DSP-1F-D2.0-L08
+T85  P85  D+2.000000 ; Esatec - Esatec 2mm 2z 9mm
+T86  P86  D+2.500000 Z+11.813111 ; SpeTool AliExpress - SpeTool 3,175mm 1z L6
+T87  P87  D+2.500000 ; Dreanique - DSP-1F-D2.5-L10
+T88  P88  D+3.175000 ; SpeTool AliExpress - SpeTool 3,175mm 1z L6
+T89  P89  D+3.175000 ; SpeTool AliExpress - SpeTool 3,175mm 1z L08
+T90  P90  D+3.175000 ; SpeTool AliExpress - SpeTool 3,175mm 1z L17
+T91  P91  D+6.000000 Z+28.541436 ; DATRON - DATRON 6mm 1z L14 - 68460E
+T92  P0   D+6.000000 ; Dreanique AliExpress - SpeTool 6mm 1z L14
+T93  P93  D+6.000000 ; Dreanique AliExpress - SpeTool 6mm 1z L22
+T99  P96  D+3.000000 ; Topcom.cz Dig.3D LPM - 3D Taster
+T101 P101 D+13.000000 Z+17.244777 ; EAP300R C12 13 80 1T
+T102 P102 D+16.000000 ; EAP300R R0.4mm C12 16 80 2T
+T150 P150 D+50.000000 Z+23.236439 ; 50mm Face Mill
+T151 P92  D+100.000000 Z+22.993112 ; 100mm FACE MILL
+T0   P0   D+6.000000 ; dummy

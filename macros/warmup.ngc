@@ -1,0 +1,29 @@
+O<warmup> sub
+
+(--------------------------------------------------------------)
+( Warmlaufscript für Spinogy X22 Spindeln nach Handbuch)
+(--------------------------------------------------------------)
+(erstellt durch "miniwinis bastelbude")
+(--------------------------------------------------------------)
+
+(--------------------------------------------------------------)
+(Warmlauf)
+(Der Warmlauf erfolgt in Teilschritten von fünf Minuten.)
+(Die Drehzahl wird bis 30.000 U/min in 25%-Schritten erhöht.)
+(Betriebsanleitung X22 - Seite 42)
+(--------------------------------------------------------------)
+
+S6000 M3
+G4 P300
+S12000 M3
+G4 P300
+S18000 M3
+G4 P300
+S24000 M3
+G4 P300
+S30000 M3
+G4 P300
+M5
+M2
+
+O<warmup> endsub

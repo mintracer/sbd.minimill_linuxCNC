@@ -1,0 +1,14 @@
+# Include your customized HAL commands here
+# This file will not be overwritten when you run stepconf again
+loadrt -W wj200_vfd ports=hm2_7i76e.0.pktuart.0
+addf wj200_vfd servo-thread
+setp wj200-vfd.0.mbslaveaddr 1
+net pdnt.spindle.reverse wj200-vfd.0.reverse
+net pdnt.spindle.is-on wj200-vfd.0.run
+net spindle-at-speed wj200-vfd.0.is-at-speed => spindle.0.at-speed
+net spindle-enable wj200-vfd.0.enable motion.motion-enabled
+loadrt mult2
+addf mult2.0 servo-thread
+setp mult2.0.in1 0.04
+net pdnt.spindle-speed-abs mult2.0.in0
+net vfd-speed wj200-vfd.0.commanded-frequency mult2.0.out

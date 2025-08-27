@@ -1,0 +1,26 @@
+# This file was created with the Mesa Configuration Tool on Mai 31 2025 01:19:08
+# If you make changes to this file DO NOT use the Configuration Tool
+
+# Inputs
+net neg-limit-joint-0 joint.0.neg-lim-sw-in <= 
+net neg-limit-joint-1 joint.1.neg-lim-sw-in <= 
+net neg-limit-joint-2 joint.2.neg-lim-sw-in <= 
+net probe-input motion.probe-input <= lcec.0.EL1018_1.din-6
+
+# E-Stop Chain
+loadrt estop_latch count=1
+addf estop-latch.0 servo-thread
+
+# E-Stop Loop
+net estop-loopin iocontrol.0.user-enable-out => estop-latch.0.ok-in
+net estop-loopback estop-latch.0.ok-out => iocontrol.0.emc-enable-in
+
+# E-Stop Reset
+net estop-reset iocontrol.0.user-request-enable
+net estop-reset => estop-latch.0.reset
+net remote-estop0 estop-latch.0.fault-in <= 
+
+# Outputs
+setp hm2_7i76e.0.7i76.0.0.output_sink 0x0
+setp hm2_7i76e.0.7i76.0.0.output_source 0xffff
+

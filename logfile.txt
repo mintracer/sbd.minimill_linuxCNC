@@ -1,0 +1,41 @@
+ Log file for the subroutine "tool_touch_off.ngc" Version 5.0.0 from TooTall18T
+ Mode: 1.000000
+ Fast: 300.000000
+ Slow: 100.000000
+ Travel: 600.000000
+ Zmax travel: 125.000000
+ XY max travel: 50.000000
+ Retract: 5.000000
+ spindle_zero_height: -190.000000
+ ===
+ tool touch x coodrs: 250.000000
+ tool touch y coodrs: 250.000000
+ tool touch z coodrs: 0.000000
+ Min XYZ: -5.000000 -5.000000 -195.000000
+ Max XYZ: 420.000000 355.000000 5.000000
+ Pos XYZ: -221.965595 -139.794744 25.000000
+ === MAIN ===
+ No Probe Basic: ######
+ tool table: 1.000000
+ tool min dis: 10.000000
+ === OPTION Generally ===
+ Brake: 0.000000
+ Back: 0.000000
+ Spindel stop: 5.000000
+ disable g30 pos: 1.000000
+ Additional reps: 0.000000
+ Last try: 0.000000
+ === OPTION Tool diameter ===
+ offset_diameter: 0.000000
+ offset_direction: 0.000000
+ offset_value: 50.000000
+ === OPTION Tool edge-finder ===
+ Finder No: 0.000000
+ Finder X: 0.000000 
+ Finder Y: 0.000000 
+ Finder diff: 0.000000
+ === OPTION Pre change pos ===
+ ============================
+ Old tool: 99.000000 / New tool: 92.000000
+ ============================
+ Offset_Z: 77.809959
