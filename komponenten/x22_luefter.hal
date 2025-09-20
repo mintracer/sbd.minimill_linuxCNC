@@ -1,0 +1,8 @@
+#Lüftersteuerung für die spinogy X22 
+
+loadrt timedelay count=1
+addf timedelay.0 servo-thread
+setp timedelay.0.off-delay 240
+net pdnt.spindle.is-on => timedelay.0.in
+net spindle-timer <= timedelay.0.out
+net spindle-timer => lcec.0.EL2024_2.dout-0
