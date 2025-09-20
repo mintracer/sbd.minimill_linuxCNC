@@ -11,7 +11,7 @@ loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JO
 
 # hostmot2 driver
 loadrt hostmot2
-loadrt [HM2](DRIVER) board_ip=[HM2](ADDRESS) config="sserial_port_0=00000000"
+loadrt [HM2](DRIVER) board_ip=[HM2](ADDRESS) config="sserial_port_0=2000"
 
 setp hm2_[MESA](BOARD).0.watchdog.timeout_ns 5000000
 

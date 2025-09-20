@@ -1,3 +1,10 @@
 #TASTER UND SCHALTER
 
-net green-on => lcec.0.EL2008_1.dout-0
+net schalter.eaton_m22.green-on => lcec.0.EL2008_1.dout-0
+#net schalter.eaton_m22.red-on => lcec.0.EL2008_1.dout-1
+#net schalter.eaton_m22.orange-on => lcec.0.EL2008_1.dout-2
+#net schalter.eaton_m22.blue-on => lcec.0.EL2008_1.dout-3
+#net schalter.eaton_m22.green-flash => lcec.0.EL2008_1.dout-4
+#net schalter.eaton_m22.orange-flash => lcec.0.EL2008_1.dout-5
+#net schalter.eaton_m22.blue-flash => lcec.0.EL2008_1.dout-6
+#net schalter.eaton_m22.white-flash => lcec.0.EL2008_1.dout-7

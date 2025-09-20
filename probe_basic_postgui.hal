@@ -46,4 +46,5 @@ source komponenten/handrad.hal
 source komponenten/ethercat_omron.hal
 source komponenten/signalleuchte.hal
 source komponenten/taster_schalter.hal
+source komponenten/x22_luefter.hal
 #source sbdminimill.hal

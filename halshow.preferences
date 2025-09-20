@@ -1,17 +1,10 @@
 # Halshow settings
 # This file is generated automatically.
-wm geometry . 1205x832+373+93
-placeFrames 0.3
-set ::ratio 0.3
+wm geometry . 865x409+926+174
+placeFrames 0.3987538940809969
+set ::ratio 0.3987538940809969
 set ::old_w_leftf 160
 set ::watchlist {
-    pin+lcec.0.EL2008_1.dout-0
-    pin+lcec.0.EL2008_1.dout-1
-    pin+lcec.0.EL2008_1.dout-2
-    pin+qtpyvcp.probe-in.enable
-    pin+qtpyvcp.probe-in.io
-    pin+qtpyvcp.probe-in.out
-    sig+tool-change-confirmed
 }
 set ::workmode watchhal
 set ::watchInterval 100

@@ -36,7 +36,7 @@ o<400> if [#<_task> EQ 1]
 #<lasttry> = 0                      ;If "1" the machine do a probing at the last repetition without the tool table. #<addreps> must be min "1".
 
 ;--Tool diameter--
-#<offset_diameter> = 13              ;Tool diameter from when a offset should take place. 0=OFF
+#<offset_diameter> = 10              ;Tool diameter from when a offset should take place. 0=OFF
 ;Direction of the offset will be set in Probe Basic (#<tool_setter_offset_direction>). 
 #<offset_value> = 50                ;How much of the tool diameter should move in percent.
 

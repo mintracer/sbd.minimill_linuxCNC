@@ -4,11 +4,13 @@
     <slave idx="1" name="EL1018_1" type="EL1018"/>
     <slave idx="2" name="EL1018_2" type="EL1018"/>
     <slave idx="3" name="EL2024_1" type="EL2024"/>
-    <slave idx="4" name="EL2008_1" type="EL2008"/>
-    <slave idx="5" name="EL2008_2" type="EL2008"/>
-    <slave idx="6" name="EL3202" type="EL3202"/>
-    <slave idx="7" name="EK1122" type="EK1122"/>
-    <slave idx="8" name="EP1809" type="EP1809"/>
-    <slave idx="9" name="3G3AX-MX2-ECT" type="OMMX2"/>
-    </master>
+    <slave idx="4" name="EL2024_2" type="EL2024"/>
+    <slave idx="5" name="EL2008_1" type="EL2008"/>
+    <slave idx="6" name="EL2008_2" type="EL2008"/>
+    <slave idx="7" name="EL2809" type="EL2809"/>
+    <slave idx="8" name="EL3202" type="EL3202"/>
+    <slave idx="9" name="EK1122" type="EK1122"/>
+    <slave idx="10" name="EP1809" type="EP1809"/>
+    <slave idx="11" name="3G3AX-MX2-ECT" type="OMMX2"/>
+        </master>
 </masters>
