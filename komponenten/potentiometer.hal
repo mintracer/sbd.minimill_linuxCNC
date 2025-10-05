@@ -1,0 +1,29 @@
+# BIT direct value 
+setp halui.spindle.0.override.direct-value 1 
+setp halui.feed-override.direct-value 1 
+setp halui.max-velocity.direct-value 1 
+
+# SCALE 
+setp halui.spindle.0.override.scale 0.01 
+setp halui.feed-override.scale 0.01 
+setp halui.max-velocity.scale 0.01 
+
+# scalemax 
+setp hm2_7i76e.0.7i76.0.0.analogin0-scalemax 155 
+setp hm2_7i76e.0.7i76.0.0.analogin1-scalemax 185
+setp hm2_7i76e.0.7i76.0.0.analogin2-scalemax 21500
+
+# FLOAT ZU S32 
+#loadrt conv_float_s32 count=3 
+#addf conv-float-s32.1 servo-thread 
+#addf conv-float-s32.2 servo-thread 
+#addf conv-float-s32.3 servo-thread 
+
+net analogin0 conv-float-s32.1.in <= hm2_7i76e.0.7i76.0.0.analogin0
+net analoginl conv-float-s32.2.in <= hm2_7i76e.0.7i76.0.0.analogin1
+net analogin2 conv-float-s32.3.in <= hm2_7i76e.0.7i76.0.0.analogin2
+
+net analogout0 conv-float-s32.1.out => halui.spindle.0.override.counts
+net analogout1 conv-float-s32.2.out => halui.feed-override.counts
+net analogout2 conv-float-s32.3.out => halui.max-velocity.counts
+

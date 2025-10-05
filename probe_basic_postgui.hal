@@ -4,18 +4,34 @@ loadrt not
 addf time.0 servo-thread
 addf not.0 servo-thread
 
-loadrt and2 count=2
-loadrt or2 count=5
-loadrt xor2 count=1
 loadrt siggen num_chan=1
+
+loadrt and2 count=2
 addf and2.0 servo-thread 			#signalleuchte.hal - Zeile 17
 addf and2.1 servo-thread
+
+loadrt or2 count=5
 addf or2.0 servo-thread 			#signalleuchte.hal - Zeile 4
 addf or2.1 servo-thread 			#handrad.hal - Zeile 58
 addf or2.2 servo-thread 			#handrad.hal - Zeile 63
 addf or2.3 servo-thread 			#handrad.hal - Zeile 128
 addf or2.4 servo-thread 			#handrad.hal - Zeile 137
+
+loadrt xor2 count=1
 addf xor2.0 servo-thread 			#signalleuchte.hal - Zeile 16
+
+loadrt conv_float_s32 count=4
+addf conv-float-s32.0 servo-thread #ethercat_omron.hal - Zeile 33
+addf conv-float-s32.1 servo-thread #potentiometer.hal- Zeile 22
+addf conv-float-s32.2 servo-thread #potentiometer.hal- Zeile 23
+addf conv-float-s32.3 servo-thread #potentiometer.hal- Zeile 24
+
+loadrt conv_float_u32 count=1
+addf conv-float-u32.0 servo-thread #ethercat_omron.hal - Zeile 28
+
+#Load mux2 for controlword - ethercat_omron.hal - Zeile 18
+loadrt mux2 names=mux2.spindle-enable
+addf    mux2.spindle-enable        servo-thread
 
 addf siggen.0.update servo-thread 	# Blinken Signalleuchte
 setp siggen.0.frequency 2  			# Blinkgeschwindikeit in Hz Programmpause - signalleuchte.hal - Zeile 18
@@ -47,4 +63,5 @@ source komponenten/ethercat_omron.hal
 source komponenten/signalleuchte.hal
 source komponenten/taster_schalter.hal
 source komponenten/x22_luefter.hal
+source komponenten/potentiometer.hal
 #source sbdminimill.hal
