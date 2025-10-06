@@ -1,7 +1,0 @@
-# halshow watchlist created Wed Jul 09 20:33:31 CEST 2025
-
-pin+lcec.0.3G3AX-MX2-ECT.srv-cia-controlword
-pin+lcec.0.3G3AX-MX2-ECT.srv-actual-vl
-pin+lcec.0.3G3AX-MX2-ECT.srv-target-vl
-pin+conv-float-u32.0.in
-pin+conv-float-u32.0.out

@@ -1,19 +1,6 @@
 #*******************
-#  ETHERCAT SPINDLE - Ethercat mainstuff loaded with ini in ethercat.hal
+#  ETHERCAT SPINDLE 
 #*******************
-
-#Load conversions for speed and controlword
-#loadrt conv_float_s32 count=4
-#loadrt conv_float_u32 count=1
-#addf conv-float-s32.0 servo-thread #ethercat_omron.hal
-#addf conv-float-s32.1 servo-thread #potentiometer.hal
-#addf conv-float-s32.2 servo-thread #potentiometer.hal
-#addf conv-float-s32.3 servo-thread #potentiometer.hal
-#addf conv-float-u32.0 servo-thread #ethercat_omron.hal
-
-#Load mux2 for controlword
-#loadrt mux2 names=mux2.spindle-enable
-#addf    mux2.spindle-enable        servo-thread
 
 #mux2 section
 #Spindle OFF
