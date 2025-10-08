@@ -7,8 +7,37 @@
     <slave idx="4" name="EL2024_2" type="EL2024"/>
     <slave idx="5" name="EL2008_1" type="EL2008"/>
     <slave idx="6" name="EL2008_2" type="EL2008"/>
-    <slave idx="7" name="EL2809" type="EL2809"/>
-    <slave idx="8" name="EL2034" type="EL2034"/>
+    <slave idx="7" type="generic" vid="0x00000002" pid="07f23052" name="EL2034" configPdos="true">
+      <syncManager idx="0" dir="out">
+        <pdo idx="1600">
+    <pdoEntry idx="7000" subIdx="1" bitLen="1" halPin="dout-0" halType="bit"/>
+  </pdo>
+  <pdo idx="1601">
+    <pdoEntry idx="7010" subIdx="1" bitLen="1" halPin="dout-1" halType="bit"/>
+  </pdo>
+  <pdo idx="1602">
+    <pdoEntry idx="7020" subIdx="1" bitLen="1" halPin="dout-2" halType="bit"/>
+  </pdo>
+  <pdo idx="1603">
+    <pdoEntry idx="7030" subIdx="1" bitLen="1" halPin="dout-3" halType="bit"/>
+  </pdo>
+  </syncManager>
+  <syncManager idx="1" dir="in">
+    <pdo idx="1a00">
+    <pdoEntry idx="6000" subIdx="1" bitLen="1" halPin="diag-0" halType="bit"/>
+  </pdo>
+  <pdo idx="1a01">
+    <pdoEntry idx="6010" subIdx="1" bitLen="1" halPin="diag-1" halType="bit"/>
+  </pdo>
+  <pdo idx="1a02">
+    <pdoEntry idx="6020" subIdx="1" bitLen="1" halPin="diag-2" halType="bit"/>
+  </pdo>
+  <pdo idx="1a03">
+    <pdoEntry idx="6030" subIdx="1" bitLen="1" halPin="diag-3" halType="bit"/>
+  </pdo>
+  </syncManager>
+    </slave>
+    <slave idx="8" name="EL2809" type="EL2809"/>
     <slave idx="9" name="EL3202" type="EL3202"/>
     <slave idx="10" name="EK1122" type="EK1122"/>
     <slave idx="11" name="EP1809" type="EP1809"/>
