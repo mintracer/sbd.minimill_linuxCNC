@@ -4,6 +4,10 @@ loadrt not
 addf time.0 servo-thread
 addf not.0 servo-thread
 
+loadrt toggle count=1
+addf toggle.0 servo-thread
+setp toggle.0.debounce 5
+
 loadrt siggen num_chan=1
 
 loadrt and2 count=2
@@ -20,11 +24,12 @@ addf or2.4 servo-thread 			#handrad.hal - Zeile 137
 loadrt xor2 count=1
 addf xor2.0 servo-thread 			#signalleuchte.hal - Zeile 16
 
-loadrt conv_float_s32 count=4
+loadrt conv_float_s32 count=5
 addf conv-float-s32.0 servo-thread #ethercat_omron.hal - Zeile 33
 addf conv-float-s32.1 servo-thread #potentiometer.hal- Zeile 22
 addf conv-float-s32.2 servo-thread #potentiometer.hal- Zeile 23
 addf conv-float-s32.3 servo-thread #potentiometer.hal- Zeile 24
+addf conv-float-s32.4 servo-thread #potentiometer.hal- Zeile 25
 
 loadrt conv_float_u32 count=1
 addf conv-float-u32.0 servo-thread #ethercat_omron.hal - Zeile 28
@@ -64,4 +69,5 @@ source komponenten/signalleuchte.hal
 source komponenten/taster_schalter.hal
 source komponenten/x22_luefter.hal
 source komponenten/potentiometer.hal
+source komponenten/usertab.hal
 #source sbdminimill.hal
